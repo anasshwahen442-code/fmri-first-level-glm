@@ -1,0 +1,44 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "nilearn": "0.14.1",
+  "numpy": "2.1.3",
+  "pandas": "3.0.6",
+  "scipy": "1.16.3",
+  "matplotlib": "3.10.0",
+  "settings": {
+    "contrast": "language - string",
+    "subjects": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10"
+    ],
+    "fwhm_main": 8,
+    "fwhm_sens": [
+      6,
+      8
+    ],
+    "high_pass_hz": 0.0078125,
+    "hrf": "spm",
+    "drift": "cosine",
+    "noise": "ar1",
+    "motion_regressors": [
+      "X",
+      "Y",
+      "Z",
+      "RotX",
+      "RotY",
+      "RotZ"
+    ],
+    "alpha": 0.05,
+    "seed": 0,
+    "dataset_dir": "/root/nilearn_data/fMRI-language-localizer-demo-dataset"
+  }
+}
