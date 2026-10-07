@@ -18,7 +18,23 @@ It is downloaded automatically by `fetch_language_localizer_demo_dataset()`; the
 5. **Robustness**: two smoothing kernels, and a refit with spike regressors for high-motion volumes (FD > 0.5 mm).
 
 ## Results
-Run the notebook and paste your own summary here (see section 8 of the notebook). Figures are written to `figures/`, tables to `results/`.
+ROI analysis, `language - string`, n = 10, 8 mm smoothing. Values are mean contrast estimates in arbitrary units.
+p-values are Bonferroni-corrected over the 4 ROIs.
+
+| ROI | mean | 95% CI | t(9) | p (t-test) | p (sign-flip) | p (Wilcoxon) | subjects > 0 |
+|---|---|---|---|---|---|---|---|
+| L STG | 0.326 | [0.183, 0.468] | 5.18 | .002 | .008 | .008 | 10/10 |
+| L IFG | 0.128 | [0.037, 0.220] | 3.18 | .045 | .070 | .078 | 8/10 |
+| L hippocampus (control) | 0.003 | [-0.031, 0.038] | 0.21 | 1.00 | 1.00 | 1.00 | 7/10 |
+| R hippocampus (control) | 0.003 | [-0.024, 0.029] | 0.22 | 1.00 | 1.00 | 1.00 | 4/10 |
+
+* **L STG** is robust: significant under all three tests, in all 10 subjects, with both kernels and with spike regressors.
+* **L IFG** is fragile: it passes the pre-specified t-test (p = .045; .041 at 6 mm; .049 with spike regressors) but not the sign-flip or Wilcoxon tests after correction. Treat it as suggestive.
+* **Hippocampal controls** show no detectable effect. An exploratory equivalence test with a post hoc bound (+/-0.109 a.u., one third of the L STG mean) places both inside the bound; the bound is arbitrary.
+* Head motion does not drive the result: refitting with spike regressors for FD > 0.5 mm volumes changes the means by at most 0.003.
+* Effect sizes (d_z = 1.0 and 1.6) are inflated by the small sample; the confidence intervals are wide.
+
+Figures are in `figures/`, tables in `results/`.
 
 ## Limitations
 * Ten subjects of a demo dataset: effect sizes are imprecise and probably inflated; confidence intervals are wide.
