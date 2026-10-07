@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+nilearn_data/
+results/effect_maps/
+fmri_glm_outputs.zip
+.venv/
+.DS_Store

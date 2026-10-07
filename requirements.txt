@@ -1,0 +1,7 @@
+# Lower bounds only. After a clean run, replace with the exact pins in results/requirements_frozen.txt
+nilearn>=0.10.4
+numpy
+pandas
+scipy
+matplotlib
+jupyter
